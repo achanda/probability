@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["erf","Compute the error function."],["erfc","Compute the complementary error function."],["inc_beta","Compute the incomplete beta function."],["inv_inc_beta","Compute the inverse of the incomplete beta function."],["ln_beta","Compute the natural logarithm of the beta function."],["ln_gamma","Compute the natural logarithm of the gamma function."]]});

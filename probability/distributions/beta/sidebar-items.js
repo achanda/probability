@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Beta","A beta distribution."]]});

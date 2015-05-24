@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Gaussian` struct in crate `probability`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Gaussian">
+
+    <title>probability::distributions::Gaussian - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>probability</a>::<wbr><a href='index.html'>distributions</a></p><script>window.sidebarCurrent = {name: 'Gaussian', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>probability</a>::<wbr><a href='index.html'>distributions</a>::<wbr><a class='struct' href=''>Gaussian</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]</a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-612' href='../../src/probability/distributions/gaussian.rs.html#7-14'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Gaussian {
+    pub mu: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>,
+    pub sigma: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>,
+    // some fields omitted
+}</pre><div class='docblock'><p>A Gaussian distribution.</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.mu'><a class='stability Unmarked' title='No stability level'></a><code>mu</code></td><td><div class='docblock'><p>The mean value.</p>
+</div></td></tr><tr><td id='structfield.sigma'><a class='stability Unmarked' title='No stability level'></a><code>sigma</code></td><td><div class='docblock'><p>The standard deviation.</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='struct' href='../../probability/distributions/struct.Gaussian.html' title='probability::distributions::Gaussian'>Gaussian</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new' class='fnname'>new</a>(mu: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, sigma: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a class='struct' href='../../probability/distributions/struct.Gaussian.html' title='probability::distributions::Gaussian'>Gaussian</a></code></h4>
+<div class='docblock'><p>Create a Gaussian distribution with the mean value <code>mu</code> and standard deviation <code>sigma</code>.</p>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if <code>sigma &lt; 0</code>.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='trait' href='../../probability/trait.Distribution.html' title='probability::Distribution'>Distribution</a> for <a class='struct' href='../../probability/distributions/struct.Gaussian.html' title='probability::distributions::Gaussian'>Gaussian</a></code></h3><div class='impl-items'><h4 id='assoc_type.Item' class='type'><a class='stability Unmarked' title='No stability level'></a><code>type Item = <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+<h4 id='method.cdf' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='../../probability/trait.Distribution.html#method.cdf' class='fnname'>cdf</a>(&amp;self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+<h4 id='method.inv_cdf' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='../../probability/trait.Distribution.html#method.inv_cdf' class='fnname'>inv_cdf</a>(&amp;self, p: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+<div class='docblock'><p>Compute the inverse of the cumulative distribution function at probability <code>p</code>.</p>
+
+<p>The code is based on a <a href="http://people.sc.fsu.edu/%7Ejburkardt/c_src/asa241/asa241.html">C implementation</a> by John Burkardt.</p>
+</div><h4 id='method.pdf' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='../../probability/trait.Distribution.html#method.pdf' class='fnname'>pdf</a>(&amp;self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+<h4 id='method.sample' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='../../probability/trait.Distribution.html#method.sample' class='fnname'>sample</a>&lt;G: <a class='trait' href='../../probability/trait.Generator.html' title='probability::Generator'>Generator</a>&gt;(&amp;self, generator: &amp;mut G) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../../probability/distributions/struct.Gaussian.html' title='probability::distributions::Gaussian'>Gaussian</a></code></h3><div class='impl-items'></div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../probability/distributions/struct.Gaussian.html' title='probability::distributions::Gaussian'>Gaussian</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../../probability/distributions/struct.Gaussian.html' title='probability::distributions::Gaussian'>Gaussian</a></code></h4>
+<h4 id='method.clone_from' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "probability";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

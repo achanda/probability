@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Beta` struct in crate `probability`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Beta">
+
+    <title>probability::distributions::Beta - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>probability</a>::<wbr><a href='index.html'>distributions</a></p><script>window.sidebarCurrent = {name: 'Beta', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>probability</a>::<wbr><a href='index.html'>distributions</a>::<wbr><a class='struct' href=''>Beta</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]</a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-23' href='../../src/probability/distributions/beta.rs.html#7-20'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Beta {
+    pub alpha: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>,
+    pub beta: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>,
+    pub a: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>,
+    pub b: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>,
+    // some fields omitted
+}</pre><div class='docblock'><p>A beta distribution.</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.alpha'><a class='stability Unmarked' title='No stability level'></a><code>alpha</code></td><td><div class='docblock'><p>The first shape parameter.</p>
+</div></td></tr><tr><td id='structfield.beta'><a class='stability Unmarked' title='No stability level'></a><code>beta</code></td><td><div class='docblock'><p>The second shape parameter.</p>
+</div></td></tr><tr><td id='structfield.a'><a class='stability Unmarked' title='No stability level'></a><code>a</code></td><td><div class='docblock'><p>The left endpoint of the support.</p>
+</div></td></tr><tr><td id='structfield.b'><a class='stability Unmarked' title='No stability level'></a><code>b</code></td><td><div class='docblock'><p>The right endpoint of the support.</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='struct' href='../../probability/distributions/struct.Beta.html' title='probability::distributions::Beta'>Beta</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new' class='fnname'>new</a>(alpha: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, beta: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, a: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, b: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a class='struct' href='../../probability/distributions/struct.Beta.html' title='probability::distributions::Beta'>Beta</a></code></h4>
+<div class='docblock'><p>Create a beta distribution with the shape parameters <code>alpha</code> and <code>beta</code> on the interval
+<code>[a, b]</code>.</p>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if <code>a &gt;= b</code>.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='trait' href='../../probability/trait.Distribution.html' title='probability::Distribution'>Distribution</a> for <a class='struct' href='../../probability/distributions/struct.Beta.html' title='probability::distributions::Beta'>Beta</a></code></h3><div class='impl-items'><h4 id='assoc_type.Item' class='type'><a class='stability Unmarked' title='No stability level'></a><code>type Item = <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+<h4 id='method.cdf' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='../../probability/trait.Distribution.html#method.cdf' class='fnname'>cdf</a>(&amp;self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+<h4 id='method.inv_cdf' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='../../probability/trait.Distribution.html#method.inv_cdf' class='fnname'>inv_cdf</a>(&amp;self, p: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+<h4 id='method.pdf' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='../../probability/trait.Distribution.html#method.pdf' class='fnname'>pdf</a>(&amp;self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+<h4 id='method.sample' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='../../probability/trait.Distribution.html#method.sample' class='fnname'>sample</a>&lt;G: <a class='trait' href='../../probability/trait.Generator.html' title='probability::Generator'>Generator</a>&gt;(&amp;self, generator: &amp;mut G) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../../probability/distributions/struct.Beta.html' title='probability::distributions::Beta'>Beta</a></code></h3><div class='impl-items'></div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../probability/distributions/struct.Beta.html' title='probability::distributions::Beta'>Beta</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../../probability/distributions/struct.Beta.html' title='probability::distributions::Beta'>Beta</a></code></h4>
+<h4 id='method.clone_from' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "probability";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>
